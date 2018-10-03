@@ -19,8 +19,8 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#variable_decl.
-    def visitVariable_decl(self, ctx:MPParser.Variable_declContext):
+    # Visit a parse tree produced by MPParser#vardecl.
+    def visitVardecl(self, ctx:MPParser.VardeclContext):
         return self.visitChildren(ctx)
 
 
@@ -44,13 +44,13 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#array_type.
-    def visitArray_type(self, ctx:MPParser.Array_typeContext):
+    # Visit a parse tree produced by MPParser#index_arr.
+    def visitIndex_arr(self, ctx:MPParser.Index_arrContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#function_decl.
-    def visitFunction_decl(self, ctx:MPParser.Function_declContext):
+    # Visit a parse tree produced by MPParser#funcdecl.
+    def visitFuncdecl(self, ctx:MPParser.FuncdeclContext):
         return self.visitChildren(ctx)
 
 
@@ -119,8 +119,8 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#procedure_decl.
-    def visitProcedure_decl(self, ctx:MPParser.Procedure_declContext):
+    # Visit a parse tree produced by MPParser#procedecl.
+    def visitProcedecl(self, ctx:MPParser.ProcedeclContext):
         return self.visitChildren(ctx)
 
 

@@ -8,25 +8,25 @@ options{
 	language=Python3;
 }
 
-program :decl+ EOF;
+program :decl+ EOF ;
 
-decl: variable_decl 
-    | function_decl 
-    | procedure_decl
+decl: vardecl 
+    | funcdecl 
+    | procedecl
     ;
 
 //-------------------------------------variable declaration--------------------------------
 
-variable_decl : VAR (var_decl SEMI)+;
+vardecl : VAR (var_decl SEMI)+;
 var_decl: ID (COMMA ID)* COLON return_type;
 return_type: primitive_type | compound_type ;
 primitive_type: BOOLEANTYPE | INTTYPE | REALTYPE | STRINGTYPE;
-compound_type: array_type;
-array_type: ARRAY LSB ('-'?INTLIT ) DD ('-'?INTLIT) RSB OF primitive_type;
+compound_type: ARRAY LSB (index_arr) DD (index_arr) RSB OF primitive_type;
+index_arr : SUB? INTLIT;
 
 //------------------------------------function declaration----------------------------------
 
-function_decl: FUNCTION ID LB param_list? RB COLON return_type SEMI variable_decl? compound_statement;
+funcdecl:FUNCTION ID LB (var_decl(SEMI var_decl)*)? RB COLON return_type SEMI vardecl? compound_statement;
 param_list: (var_decl (SEMI var_decl)*);
 compound_statement:BEGIN (statement)* END;
 
@@ -42,7 +42,9 @@ statement : assignment_statement
           | compound_statement
           | with_statement
             ;
-assignment_statement: ( (ID | index_exp) ASSIGN)+ expression SEMI;
+assignment_statement: lhs+ expression SEMI;
+
+lhs: (ID | index_exp) ASSIGN
 
 if_statement: IF expression THEN statement (ELSE statement)?;
 
@@ -58,13 +60,11 @@ return_statement: RETURN expression? SEMI;
 
 with_statement: WITH (var_decl SEMI)+ DO statement ;
 
-call_statement: ID LB list_exp? RB SEMI;
-
-list_exp: expression(COMMA expression)*;
+call_statement: ID LB (expression(COMMA expression)*)? RB SEMI;
 
 //---------------------------------------Procedure declaration---------------------------------
 
-procedure_decl: PROCEDURE ID LB param_list? RB SEMI variable_decl? compound_statement ;
+procedecl: PROCEDURE ID LB param_list? RB SEMI vardecl? compound_statement ;
 
 //---------------------------------------Expression--------------------------------------------
  

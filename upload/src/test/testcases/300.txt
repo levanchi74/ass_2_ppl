@@ -1,1 +1,1 @@
-procedure main(); begin end
+var a,b,c:integer;
