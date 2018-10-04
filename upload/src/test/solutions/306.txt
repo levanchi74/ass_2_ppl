@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(foo),[VarDecl(Id(a),FloatType)],IntType,[],[Return(Some(IntLiteral(3)))])])

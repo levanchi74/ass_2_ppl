@@ -1,0 +1,4 @@
+function foo(i:integer):real;
+                   var s:real;
+                    begin
+                    end

@@ -1,1 +1,1 @@
-Program([None,None])
+Program([VarDecl(Id(d),ArrayType(1,5,IntType)),VarDecl(Id(b),ArrayType(1,5,IntType))])

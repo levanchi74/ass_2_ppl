@@ -1,0 +1,1 @@
+for,a,:=,5,to,10,do,if,(,a,=,7,),Then,a,:=,b,[,10,],:=,5,;,else,continuE,;,<EOF>

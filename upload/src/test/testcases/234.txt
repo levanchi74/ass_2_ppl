@@ -1,0 +1,6 @@
+
+            procedure f(a,b,c:integer;c:real);
+            var x , y :real;
+            begin
+            end
+            

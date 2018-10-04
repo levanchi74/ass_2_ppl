@@ -1,6 +1,1 @@
-procedure main (); begin
-            getIntLn();
-        end
-        function foo ():INTEGER; begin
-            putIntLn(4);
-        end
+var d,b : array [    1 .. 5    ] of integer ;

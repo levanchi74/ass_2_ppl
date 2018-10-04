@@ -1,0 +1,5 @@
+
+            procedure f(a,b,c:integer;c:array);
+            begin
+            end
+            

@@ -1,0 +1,8 @@
+
+            function foo (i:integer):real;
+            procedure child_of_foo (f :real)
+                begin
+                end
+            begin
+            end
+            

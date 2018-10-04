@@ -1,0 +1,4 @@
+function foo(a:real):INTEGER; 
+        begin
+            return 3;
+        end

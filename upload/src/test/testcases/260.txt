@@ -1,0 +1,6 @@
+function _ADBfoo(a,b,c: real; a:array[1 .. -4] of string): array[1 .. 5] of boolean;
+                   BEGIN
+                    
+                    foo(3,a+1,a[1],foo(1,2)[m+1],x and then y);
+                    return foo2();
+                   END

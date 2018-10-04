@@ -27,8 +27,8 @@ index_arr : SUB? INTLIT;
 //------------------------------------function declaration----------------------------------
 
 funcdecl:FUNCTION ID LB (var_decl(SEMI var_decl)*)? RB COLON return_type SEMI vardecl? compound_statement;
-param_list: (var_decl (SEMI var_decl)*);
-compound_statement:BEGIN (statement)* END;
+//param_list: (var_decl (SEMI var_decl)*);
+compound_statement:BEGIN statement* END;
 
 //-------------------------------------statement--------------------------------------------
 statement : assignment_statement
@@ -41,10 +41,10 @@ statement : assignment_statement
           | call_statement
           | compound_statement
           | with_statement
-            ;
+          ;
 assignment_statement: lhs+ expression SEMI;
 
-lhs: (ID | index_exp) ASSIGN
+lhs: (ID | index_exp) ASSIGN;
 
 if_statement: IF expression THEN statement (ELSE statement)?;
 
@@ -64,7 +64,7 @@ call_statement: ID LB (expression(COMMA expression)*)? RB SEMI;
 
 //---------------------------------------Procedure declaration---------------------------------
 
-procedecl: PROCEDURE ID LB param_list? RB SEMI vardecl? compound_statement ;
+procedecl: PROCEDURE ID LB (var_decl (SEMI var_decl)*)? RB SEMI vardecl? compound_statement ;
 
 //---------------------------------------Expression--------------------------------------------
  
@@ -86,7 +86,7 @@ exp4: (SUB | NOT) exp4
     ;
 exp5: LB expression RB | index_exp | funcall | literal | ID ;
 
-funcall :  ID LB list_exp? RB ;
+funcall :  ID LB ( expression( COMMA expression )* )? RB ;
 literal: INTLIT | FLOATLIT | STRINGLIT | BOOLEANLIT;
 index_exp: (ID|funcall|INTLIT) LSB expression RSB;
 

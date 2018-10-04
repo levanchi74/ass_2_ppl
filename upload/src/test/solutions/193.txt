@@ -1,0 +1,1 @@
+notorand,*,div,<EOF>

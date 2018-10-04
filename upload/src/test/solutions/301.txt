@@ -1,1 +1,1 @@
-Program([None])
+Program([VarDecl(Id(a),IntType),VarDecl(Id(b),IntType),VarDecl(Id(c),IntType),VarDecl(Id(e),FloatType),VarDecl(Id(f),FloatType)])

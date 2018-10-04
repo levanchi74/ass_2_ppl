@@ -1,0 +1,1 @@
+var,x,:,array,[,1,..,6,],of,integer,;,<EOF>
