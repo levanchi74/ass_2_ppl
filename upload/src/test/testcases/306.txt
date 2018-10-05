@@ -1,4 +1,7 @@
-function foo(a:real):INTEGER; 
-        begin
-            return 3;
-        end
+procedure main(a,b : integer; c:array[1 .. 100] of string);
+                    var a : integer;
+                    Begin
+                        foo();
+                        foo(2);
+                        foo(3);
+                    end 

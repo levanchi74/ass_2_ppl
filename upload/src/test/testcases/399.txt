@@ -1,0 +1,4 @@
+procedure foo();
+                    begin
+                        c := a and then putIntLn( i ) or else c and then d ;
+                    end

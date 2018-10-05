@@ -1,0 +1,13 @@
+procedure foo(a,b: integer; c: array [1 .. 5] of string);
+		var x,y: real ;
+		z: array [10 .. 20] of integer ;
+		begin
+			while a < 5
+				do
+				begin
+					x := x + 1 ;
+					y := y + 1 ;
+					z := z + 1 ;
+				end
+		end
+		

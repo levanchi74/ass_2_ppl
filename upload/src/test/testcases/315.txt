@@ -1,0 +1,5 @@
+procedure foo();
+                    begin
+                        if a > 3 then a := 3;
+                        else a := 1;
+                    end

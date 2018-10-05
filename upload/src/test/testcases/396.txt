@@ -1,0 +1,6 @@
+
+        procedure main();
+        begin
+            with i :integer; do a := 1;
+        end
+        

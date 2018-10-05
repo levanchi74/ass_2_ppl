@@ -1,0 +1,14 @@
+function foo(): integer;
+        begin
+            if a < 5 then		
+                begin
+                    a := a + 1 ;
+                    a := a * 3 ;					
+                end
+            else
+                begin
+                    a := a - 1 ;
+                    a := a / 3 ;					
+                end
+        end
+        

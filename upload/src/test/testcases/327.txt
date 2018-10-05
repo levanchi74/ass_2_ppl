@@ -1,0 +1,5 @@
+function foo(): integer;
+		var b: integer;
+		begin
+		end
+		

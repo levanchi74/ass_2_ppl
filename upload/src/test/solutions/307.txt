@@ -1,1 +1,1 @@
-Program([FuncDecl(Id(foo),[],ArrayType(1,2,IntType),[],[])])
+Program([FuncDecl(Id(foo),[VarDecl(Id(a),FloatType)],IntType,[],[Return(Some(IntLiteral(3)))])])

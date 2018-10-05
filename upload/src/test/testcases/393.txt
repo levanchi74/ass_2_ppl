@@ -1,0 +1,3 @@
+var a:integer;
+                       c,d:array[-1 .. 6] of string;
+        

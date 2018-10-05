@@ -24,10 +24,10 @@ class ParserSuite(unittest.TestCase):
     #test function declar
     def test_function_decla(self):
         """test function declar """
-        input="""function foo (a , b : integer ; c : real ) : array [ 1 .. 2 ] of integer ;
-            var x , y : real ; 
+        input="""function foo ( ) : integer ;
             begin
-                foo(1);
+                a[1]:=2;
+                foo(2)[3+x] := a[b[2]] +3;
             end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,205))

@@ -1,0 +1,5 @@
+function foo(): integer;
+		begin
+			a := b[10] := foo()[3] := x := 1 ;
+		end
+		

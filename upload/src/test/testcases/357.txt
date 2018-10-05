@@ -1,0 +1,7 @@
+function foo(): integer;
+		begin
+			while a <= b
+			do
+				a := a*b - 6 ;
+		end
+		

@@ -1,0 +1,10 @@
+
+			var a,b: integer ;
+			c,d: real;
+			function foo(a,b: integer; c: array [1 .. 3] of integer): integer;
+			var a,b: integer ;
+			c,d: real ;
+			begin
+				a := 3 ;
+			end
+		

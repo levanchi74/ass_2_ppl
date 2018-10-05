@@ -1,5 +1,4 @@
-function foo () : array [ 1 .. 2 ] of integer ;
-            
-            begin
-            
-            end
+function foo(a:real):INTEGER; 
+        begin
+            return 3;
+        end

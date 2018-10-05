@@ -1,0 +1,6 @@
+procedure main();
+            var a : integer;
+            Begin
+            if True then a:=2;
+            
+            end

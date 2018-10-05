@@ -1,0 +1,4 @@
+var a : integer;
+                b,c:real;
+                c:array[1 .. 100] of boolean;
+                d:string;

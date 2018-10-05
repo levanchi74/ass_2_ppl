@@ -84,7 +84,12 @@ exp3: exp3 (DIVISION | MUL | DIV | MOD | AND) exp4
 exp4: (SUB | NOT) exp4
     | exp5
     ;
-exp5: LB expression RB | index_exp | funcall | literal | ID ;
+
+exp5: exp5 LSB expression RSB 
+    | exp6 
+    ;
+
+exp6: LB expression RB | index_exp | funcall | literal | ID ;
 
 funcall :  ID LB ( expression( COMMA expression )* )? RB ;
 literal: INTLIT | FLOATLIT | STRINGLIT | BOOLEANLIT;

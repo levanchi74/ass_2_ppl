@@ -1,0 +1,5 @@
+function foo(): integer;
+		begin
+			a := foo(1 + 2,3 * b,c[d[2 + 4]]) ;
+		end
+		

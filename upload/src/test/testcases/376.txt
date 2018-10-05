@@ -1,0 +1,4 @@
+function foo(a,b: integer ; c: real): array [1 .. 5] of integer;
+		begin
+		end
+		

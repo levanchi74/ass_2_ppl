@@ -1,0 +1,9 @@
+procedure foo(a,b: integer; c: array [1 .. 5] of string);
+		var x,y: real ;
+		z: array [10 .. 20] of integer ;
+		begin
+			for a :=  b*c - y/z to b/c + y*z
+			do
+				x := x + 1 ;
+		end
+		

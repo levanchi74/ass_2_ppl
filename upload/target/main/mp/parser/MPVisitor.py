@@ -54,11 +54,6 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#param_list.
-    def visitParam_list(self, ctx:MPParser.Param_listContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MPParser#compound_statement.
     def visitCompound_statement(self, ctx:MPParser.Compound_statementContext):
         return self.visitChildren(ctx)
@@ -71,6 +66,11 @@ class MPVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MPParser#assignment_statement.
     def visitAssignment_statement(self, ctx:MPParser.Assignment_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MPParser#lhs.
+    def visitLhs(self, ctx:MPParser.LhsContext):
         return self.visitChildren(ctx)
 
 
@@ -114,11 +114,6 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#list_exp.
-    def visitList_exp(self, ctx:MPParser.List_expContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MPParser#procedecl.
     def visitProcedecl(self, ctx:MPParser.ProcedeclContext):
         return self.visitChildren(ctx)
@@ -151,6 +146,11 @@ class MPVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MPParser#exp5.
     def visitExp5(self, ctx:MPParser.Exp5Context):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MPParser#exp6.
+    def visitExp6(self, ctx:MPParser.Exp6Context):
         return self.visitChildren(ctx)
 
 

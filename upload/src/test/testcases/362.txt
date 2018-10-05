@@ -1,0 +1,12 @@
+procedure foo(a,b: integer; c: array [1 .. 5] of string);
+		var x,y: real ;
+		z: array [10 .. 20] of integer ;
+		begin
+			if x < 5 then
+				if z < 20 then
+					if y < 3 then
+						a := b + 1 ;
+					else
+						a := c + 1 ;
+		end
+		

@@ -1,0 +1,7 @@
+procedure foo();
+                    begin
+                        begin
+                            return b;
+                        end
+                        return a;
+                    end

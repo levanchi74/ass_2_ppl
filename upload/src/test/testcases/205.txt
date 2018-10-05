@@ -1,5 +1,5 @@
-function foo (a , b : integer ; c : real ) : array [ 1 .. 2 ] of integer ;
-            var x , y : real ; 
+function foo ( ) : integer ;
             begin
-                foo(1);
+                a[1]:=2;
+                foo(2)[3+x] := a[b[2]] +3;
             end

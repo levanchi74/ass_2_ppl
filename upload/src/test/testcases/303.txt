@@ -1,1 +1,3 @@
-var d , b : array [    1 .. 5    ] of integer ; a: string
+
+                var d , b : array [    1 .. 5    ] of integer ; a: string
+                

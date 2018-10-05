@@ -1,0 +1,20 @@
+procedure foo(a,b: integer; c: array [1 .. 5] of string);
+		var x,y: real ;
+		z: array [10 .. 20] of integer ;
+		begin
+			with d: integer;
+			do
+			begin
+				with e,f: real ;
+				do
+				begin
+					with g,h: real ; i,j: array [-1 .. 2] of integer ;
+					do
+					begin
+						x := x + 1 ;
+						y := y + 1 ;
+					end
+				end
+			end
+		end
+		

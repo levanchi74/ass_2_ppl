@@ -1,0 +1,4 @@
+function foo(): array [1 .. 5] of integer;
+		begin
+		end
+		

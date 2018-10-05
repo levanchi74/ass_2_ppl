@@ -1,0 +1,4 @@
+procedure foo();
+                    begin
+                        a := 1 and then 2 or else 3 > 4;
+                    end

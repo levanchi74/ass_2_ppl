@@ -154,7 +154,7 @@ class ASTGeneration(MPVisitor):
         return FuncDecl(
             Id(ctx.ID().getText()),
             flatten([self.visit(x) for x in ctx.var_decl()]) if (ctx.var_decl()) else [],
-            self.visit(ctx.vardecl()),
+            self.visit(ctx.vardecl()) if (ctx.vardecl()) else [],
             self.visit(ctx.compound_statement()),
             VoidType()
         )
@@ -218,8 +218,15 @@ class ASTGeneration(MPVisitor):
                 self.visit(ctx.exp4())
             )
 
-    #exp5: LB expression RB | index_exp | funcall | literal | ID ;
+    # exp5: exp5 LSB expression RSB | exp6 
     def visitExp5(self,ctx:MPParser.Exp5Context):
+        if ctx.getChildCount()==4:
+            return ArrayCell(self.visit(ctx.exp5()),self.visit(ctx.expression()))
+        else : 
+            return self.visit(ctx.exp6())
+    
+    #exp5: LB expression RB | index_exp | funcall | literal | ID ;
+    def visitExp6(self,ctx:MPParser.Exp6Context):
         if (ctx.getChildCount()==3):
             return self.visit(ctx.expression())
         elif (ctx.index_exp()):
@@ -240,19 +247,19 @@ class ASTGeneration(MPVisitor):
     def visitLiteral(self,ctx:MPParser.LiteralContext):
         if (ctx.INTLIT()): 
             return IntLiteral(int(ctx.INTLIT().getText()))
-        if (ctx.FLOATLIT()):
+        elif (ctx.FLOATLIT()):
             return FloatLiteral(float(ctx.FLOATLIT().getText()))
-        if (ctx.STRINGLIT()):
+        elif (ctx.STRINGLIT()):
             return StringLiteral(ctx.STRINGLIT().getText())
-        if (ctx.BOOLEANLIT()):
-            return BooleanLiteral(bool(ctx.BOOLEANLIT().getText()))
+        else:
+            return BooleanLiteral(True)
 
     def visitIndex_exp(self,ctx:MPParser.Index_expContext):
-        if (ctx.ID()): 
+        if ctx.ID(): 
             return ArrayCell(Id(ctx.ID().getText()),self.visit(ctx.expression()))
-        if (ctx.funcall()): 
+        elif (ctx.funcall()): 
             return ArrayCell(self.visit(ctx.funcall()),self.visit(ctx.expression()))
-        if (ctx.INTLIT()): 
+        else:
             return ArrayCell(IntLiteral(int(ctx.INTLIT().getText())),self.visit(ctx.expression()))
     
     
